@@ -7,6 +7,10 @@ class Animal:
         print("Animal made a noise!")
 
 class OrcaWhale(Animal):
+    def __init__(self, given_name, given_colour):
+        super().__init__(given_name, given_colour)
+        self.fins = 3
+
     # Overriding
     def make_noise(self):
         print("OOOOO!")
@@ -22,3 +26,4 @@ orca = OrcaWhale("Jimmy", "White")
 cat.make_noise()
 orca.make_noise()
 orca.swim()
+print(orca.fins)
